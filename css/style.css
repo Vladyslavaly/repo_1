@@ -1,0 +1,173 @@
+/* 
+body      - селектор по тегу        1
+.header    -  селектор по класу     10
+#about_me   - селектор по ID        100
+*/
+
+@import url('./_normalize.css');
+/* -------- Створення змінних--------- */
+:root {
+    --main-font-size: 18px;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--main-font-size);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+.header {
+    padding: 25px 0;
+    text-align: center;
+}
+.flex-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* #about_me  {
+    text-align: center;
+} */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+.menu__link {
+    text-decoration: none;
+    color: #828282;
+}
+.menu__link:hover {
+    color: #070707;
+}
+
+.nav {
+    position: relative;
+}
+/* .nav::after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #828282;
+} */
+
+.title_1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+.title_1:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.wrapper-img {
+    width: 100%;
+    height: 388px;
+}
+
+.img {
+    width: 100%;
+}
+
+.about-me {
+    padding: 100px 0;
+    text-align: center;
+    background: #F6F6F6;
+}
+
+.title_2 {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.text {
+    max-width: 470px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    line-height: 25px;
+    
+}
+/* .text_none-border {
+    border-bottom: none;
+} */
+
+p.text:not(:nth-of-type(2)) {
+    border-bottom: 1px solid #000;
+}
+
+section:nth-of-type(2) {
+    background: #919b9e;
+}
+
+section#portfolio ~ div.container > p:nth-of-type(3) {
+    background: red;
+}
+
+/* -------------- Комбінатори ------------------- */
+/*    ' ', > , +, ~     */
+/* section p {
+    color: red;
+} */
+
+/* .container > p {
+    color: blue;
+} */
+
+/* .title_2 + p {
+    color: yellow;
+} */
+
+h2.title_2 ~ div {
+    color: yellow;
+}
+
+.buttons_btn:first-of-type {
+    margin-right: 14px;
+}
+.buttons_btn {
+    background: #ea6b6b;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 18px;
+    border: none;
+    outline: none;
+}
+.form {
+    max-width: 350px;
+    background: linear-gradient(5deg, #61AAA6, #49c8d3e0);
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 1px 5px 13px 4px #426B6D;
+}
+
+.form input,
+.form textarea,
+.form select {
+    width: 100%;
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border: none;
+}
+.form label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #164052;
+}
+.form input[type="radio"]
